@@ -1,0 +1,40 @@
+name = input("Enter your name: ")
+total = 0
+while True:
+    ammount = float(input("Enter the amount per item: "))
+    quantity = int(input("Enter the quantity: "))
+    total += quantity * ammount
+    gst = (total / 100) * 18  # 18% GST
+    after_gst = total + gst
+
+
+    repeat = input("Do you want to add more items (y/n): ").lower()
+    if repeat == "n" or repeat == "no":
+        break
+
+
+discount_percentage = float(input("Enter discount percentage (if any): "))
+discount = (total / 100) * discount_percentage
+total_after_discount = total - discount
+
+
+gst_after_discount = (total_after_discount / 100) * 18
+final_amount = total_after_discount + gst_after_discount
+
+
+print("-" * 60)
+print("Basu Restaurant")
+print("Customer Name:", name)
+print("Total Quantity:", quantity)
+print("Amount before GST:", total)
+print("Amount after 18% GST:", after_gst)
+print(f"Discount Applied: {discount_percentage}% = {discount}")
+print("Total after discount:", total_after_discount)
+print("Final amount after GST and discount:", final_amount)
+print("-"*60)
+
+
+while True:
+    repeat1 = input("Next customer? (yes/no): ").lower()
+    if repeat1 == "n" or repeat1 == "no":
+        break
