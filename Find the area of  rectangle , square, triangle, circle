@@ -1,0 +1,48 @@
+print("Area calculator")
+while True:
+   choice=int(input("""Enter your choice 1-4
+   1 For area of rectangle
+   2 For area of square
+   3 For area of triangle
+   4 For area of circle"""))
+
+   if choice==1:
+     while True:
+           length=float(input("Enter the length"))
+           breadth=float(input("Enter the breadth"))
+           total=length * breadth
+           print("Answer is ",total)
+           repeat1=input("Do you want to again area of rectangle")
+           if repeat1== "no":
+            break
+
+   elif choice==2:
+       while True:
+            area=int(input("Enter the length"))
+            ans=area*area
+            print("Answer is",ans)
+            repeat2 = input("Do you want to again area of square")
+            if repeat2 == "no":
+             break
+
+   elif choice==3:
+        while True:
+          hy=float(input("Enter your height"))
+          base=float(input("Enter your base"))
+          area=1/2*base*hy
+          print("Answer is",area)
+          repeat3 = input("Do you want to Print again area of Triangle")
+          if repeat3 == "no":
+            break
+
+   elif choice ==4:
+        while True:
+           r=int(input("Enter the radius of circle"))
+           area=3.14*r*r
+           print("Answer is ",area)
+           repeat4 = input("Do you want to print again area of circle")
+           if repeat4 == "no":
+            break
+   repeat5=input("Do you want to go to main menu")
+   if repeat5=="no":
+        break
